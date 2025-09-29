@@ -2,42 +2,58 @@ site_name: Elizabeth Friedman - 25.2
 site_desciption: Repositório destinado à matéria de Qualidade de Software 1, da FCTE-UnB.
 
 nav:  
-  - Home: index.md 
+  - Início: index.md 
+  - Fase 1: fase1/fase1.md
 
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
 
 
 theme:
   name: material
-  features:
-    - navigation.tabs
-    - navigation.top
-    - navigation.sections
-    - toc.integrate
-    - content.code.annotate
-    - content.code.copy
-    - content.tabs.link
-    - header.autohide
-    - search.suggest
-    - search.highlight
-    - search.share
-    - palette.toggle
   favicon: assets/icon_mini.png
   logo: assets/icon_mini.png
 
   pallete:
-    - scheme: default
-      primary: white
-      accent: light blue
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: custom
       toggle:
         icon: material/weather-night
-        name: Mudar para o modo escuro
+        name: Switch to dark mode
 
-    - scheme: slate
-      primary: black
-      accent: light blue
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
       toggle:
         icon: material/weather-sunny
-        name: Mudar para o modo claro
+        name: Switch to system preference
+
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - navigation.expand
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
   
   font:
     text: Roboto 
