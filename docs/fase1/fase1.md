@@ -117,34 +117,32 @@ O LinkedIn é uma <b>plataforma de rede social profissional baseada na web e em 
 
 ## 4. Modelo de Qualidade e Representação Gráfica
 
-<div style="text-align: justify; text-indent: 2cm;">
-Para este projeto, será utilizada uma adaptação do modelo de qualidade de produto da norma <b>ISO/IEC 25010 (SQuaRE)</b>.
-</div>
+Para a avaliação de qualidade do software LinkedIn, foi adotado como referência o modelo de qualidade de produto definido pela norma **ISO/IEC 25010**, que faz parte do framework SQuaRE. A escolha deste modelo padrão se justifica por oferecer uma taxonomia consolidada e abrangente para a especificação dos requisitos de avaliação de um produto de software.
 
-<ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
-<li><b>Adaptação do Modelo</b>: O modelo será focado nas características mais críticas para a confiança do usuário e para o sucesso do negócio no contexto de busca de emprego. As características selecionadas são <b>Segurança, Eficiência de Desempenho e Confiabilidade</b>. A característica Usabilidade foi excluída, conforme a premissa do trabalho. O modelo adaptado deve refletir os componentes relevantes ao software avaliado.
-</ul>
+* **Adaptação do Modelo**: O modelo padrão foi adaptado para focar nos aspectos mais críticos do LinkedIn, considerando seu propósito e o escopo definido para esta avaliação. O propósito de avaliar a jornada do candidato a uma vaga orienta a seleção das características. Foram selecionadas duas características de qualidade de produto, com a exclusão explícita da característica Usabilidade, conforme a premissa do trabalho. As características escolhidas são:
 
+    * **1. Adequação Funcional:** Refere-se à capacidade do software de prover funcionalidades que atendam às necessidades declaradas e implícitas do usuário.
+        * **Completude Funcional:** Avalia se o conjunto de funções oferecidas é suficiente para a conclusão de tarefas essenciais (ex: preenchimento do perfil, candidatura a vagas).
+        * **Correção Funcional:** Verifica se as funções produzem os resultados corretos (ex: filtros de busca retornam resultados precisos).
+        * **Pertinência Funcional:** Examina se as funcionalidades disponíveis são apropriadas para os objetivos do usuário (ex: recomendações de vagas são pertinentes).
+
+    * **2. Compatibilidade:** Refere-se à capacidade do produto de coexistir e trocar informações com outros sistemas, compartilhando o mesmo ambiente e recursos.
+        * **Coexistência:** Avalia a capacidade do software de operar em seu ambiente sem impactar negativamente outros softwares (ex: uso de recursos de CPU e memória do navegador).
+        * **Interoperabilidade:** Mede a capacidade de trocar informações com outros sistemas (ex: exportação de perfil para PDF ou integração com sistemas de recrutamento).
 
 ### 4.1 Representação Gráfica
 
-<div style="text-align: justify; text-indent: 2cm;">
-A estrutura segue o seguinte:
-</div>
+A representação gráfica do modelo adaptado é fundamental para comunicar de forma clara a estrutura da avaliação. Ela é organizada em um diagrama hierárquico com a seguinte estrutura:
 
-<ol style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
-<li><b>Nível 0 (Raiz)</b>: Qualidade de Produto do LinkedIn.
-<li><b>Nível 1 (Características)</b>: Crie três ramificações principais a partir da raiz, uma para cada característica escolhida: Segurança, Eficiência de Desempenho e Confiabilidade.
-<li><b>Nível 2 (Subcaracterísticas)</b>: Para cada característica, adicione ramificações com suas subcaracterísticas relevantes. Por exemplo:
-    <ul>
-        <li>Segurança: Confidencialidade, Integridade, Não repúdio, Prestação de contas (Accountability) e Autenticidade.
-        <li>Eficiência de Desempenho: Comportamento em relação ao tempo e Utilização de recursos.
-        <li>Confiabilidade: Maturidade, Disponibilidade e Tolerância a falhas.
-    </ul>
-</ol>
+1.  **Nível 0 (Raiz):** O nó central, intitulado **"Qualidade de Produto do Software LinkedIn"**, que representa o objeto geral da avaliação.
+2.  **Nível 1 (Características):** Duas ramificações principais que derivam da raiz, representando as características de alto nível selecionadas: **"Adequação Funcional"** e **"Compatibilidade"**.
+3.  **Nível 2 (Subcaracterísticas):** Cada característica se decompõe em nós secundários.
+    * *Adequação Funcional* desdobra-se em: `Completude Funcional`, `Correção Funcional` e `Pertinência Funcional`.
+    * *Compatibilidade* desdobra-se em: `Coexistência` e `Interoperabilidade`.
 
-Este diagrama representa visualmente o modelo de qualidade específico para o LinkedIn.
+![Diagrama do Modelo de Qualidade](../assets/Qualidade_de_software.png)
 
+Este diagrama representa visualmente o modelo de qualidade específico para a avaliação do LinkedIn, delimitando o escopo e a relação entre os atributos que serão analisados.
 
 ## 5. Seleção e Priorização de Características
 
@@ -154,6 +152,12 @@ Foram escolhidas 2 características de qualidade, com base no propósito da aval
 
 <ol style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
 
+1. **Adequação Funcional (Prioridade Alta):**
+    * **Justificativa:** A principal proposta de valor do LinkedIn reside na eficácia de suas ferramentas. Se a busca de vagas não retorna resultados relevantes (correção funcional), se o perfil não permite adicionar todas as informações necessárias (completude funcional) ou se a candidatura a uma vaga falha, a plataforma perde completamente seu propósito para o usuário. A adequação funcional é, portanto, a base para que os profissionais atinjam seus objetivos de carreira através do serviço.
+
+2. **Compatibilidade (Coexistência) (Prioridade Alta):**
+    * **Justificativa:** O LinkedIn não opera isoladamente; ele coexiste no ambiente digital do usuário (navegador com múltiplas abas, extensões) e se integra a um ecossistema profissional maior (sistemas de rastreamento de candidatos - ATS, plataformas de e-mail, etc.). É crucial que a plataforma funcione de forma eficiente sem consumir recursos excessivos que impactem negativamente outras aplicações. A capacidade de coexistir e interoperar sem conflitos garante uma experiência fluida e profissional.
+    
 </ol>
 
 ## 6. Escopo, Profundidade e Objetos de Avaliação
@@ -166,20 +170,18 @@ A definição clara do escopo é fundamental para a execução do projeto.
 ### 6.1 Objetos de Avaliação
 
 <ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
-<li>O processo de <b>edição e salvamento de informações</b> na seção "Experiência" do perfil.
-<li>A funcionalidade de <b>busca de vagas</b>, aplicando pelo menos três filtros (ex: cargo, localidade e tipo de vaga).
-<li>O fluxo de <b>candidatura simplificada</b> ("Easy Apply").
+* O processo de **edição e salvamento de informações** na seção "Experiência" do perfil.
+* A funcionalidade de **busca de vagas**, aplicando pelo menos três filtros (ex: cargo, localidade e tipo de vaga).
+* O fluxo de **candidatura simplificada** ("Easy Apply").
 </ul>
 
 
 ### 6.2 Profundidade da Avaliação
 
 <ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
-<li><b>Segurança</b>: Análise focada na confidencialidade dos dados durante a candidatura (verificação de uso de HTTPS) e na autenticidade (proteção contra CSRF no formulário).
-<li><b>Eficiência de Desempenho</b>: Medição do tempo de resposta da busca de vagas e do tempo para submeter uma candidatura simplificada.
-<li><b>Confiabilidade</b>: Verificação da consistência dos dados após a edição do perfil e da taxa de sucesso no envio de candidaturas.
+<li><b>Adequação Funcional</b>: A análise verificará se os filtros de busca de vagas operam corretamente (Correção Funcional) e se o formulário de candidatura contém os campos essenciais para o processo (Completude Funcional)..
+<li><b>Compatibilidade (Coexistência)</b>: Serão realizados testes de uso da plataforma em diferentes navegadores (ex: Chrome, Firefox com extensões ativas) para observar o consumo de recursos (CPU, memória) e verificar se há impacto negativo no desempenho de outras aplicações abertas simultaneamente.
 </ul>
-
 
 ### 6.3 Fora do Escopo
 
