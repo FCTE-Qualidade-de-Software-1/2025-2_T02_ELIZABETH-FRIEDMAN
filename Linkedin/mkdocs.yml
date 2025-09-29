@@ -1,1 +1,47 @@
-site_name: 2025-2_T02_ELIZABETH-FRIEDMAN
+site_name: Elizabeth Friedman - 25.2
+site_desciption: Repositório destinado à matéria de Qualidade de Software 1, da FCTE-UnB.
+
+nav:  
+  - Home: index.md 
+
+
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - toc.integrate
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - header.autohide
+    - search.suggest
+    - search.highlight
+    - search.share
+    - palette.toggle
+  favicon: assets/icon_mini.png
+  logo: assets/icon_mini.png
+
+  pallete:
+    - scheme: default
+      primary: white
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Mudar para o modo escuro
+
+    - scheme: slate
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para o modo claro
+  
+  font:
+    text: Roboto 
+    code: Roboto Mono
+
+extra_css:
+  - stylesheets/styles.css
