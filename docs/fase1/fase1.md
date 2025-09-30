@@ -152,11 +152,10 @@ Foram escolhidas 2 características de qualidade, com base no propósito da aval
 
 <ol style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
 
-1. **Adequação Funcional (Prioridade Alta):**
-    * **Justificativa:** A principal proposta de valor do LinkedIn reside na eficácia de suas ferramentas. Se a busca de vagas não retorna resultados relevantes (correção funcional), se o perfil não permite adicionar todas as informações necessárias (completude funcional) ou se a candidatura a uma vaga falha, a plataforma perde completamente seu propósito para o usuário. A adequação funcional é, portanto, a base para que os profissionais atinjam seus objetivos de carreira através do serviço.
+<li><b>Adequação Funcional (Prioridade Alta)</b>: 
+Justificativa: A principal proposta de valor do LinkedIn reside na eficácia de suas ferramentas. Se a busca de vagas não retorna resultados relevantes (correção funcional), se o perfil não permite adicionar todas as informações necessárias (completude funcional) ou se a candidatura a uma vaga falha, a plataforma perde completamente seu propósito para o usuário. A adequação funcional é, portanto, a base para que os profissionais atinjam seus objetivos de carreira através do serviço.
 
-2. **Compatibilidade (Coexistência) (Prioridade Alta):**
-    * **Justificativa:** O LinkedIn não opera isoladamente; ele coexiste no ambiente digital do usuário (navegador com múltiplas abas, extensões) e se integra a um ecossistema profissional maior (sistemas de rastreamento de candidatos - ATS, plataformas de e-mail, etc.). É crucial que a plataforma funcione de forma eficiente sem consumir recursos excessivos que impactem negativamente outras aplicações. A capacidade de coexistir e interoperar sem conflitos garante uma experiência fluida e profissional.
+<li><b>Compatibilidade (Coexistência) (Prioridade Alta)</b>: Justificativa: O LinkedIn não opera isoladamente; ele coexiste no ambiente digital do usuário (navegador com múltiplas abas, extensões) e se integra a um ecossistema profissional maior (sistemas de rastreamento de candidatos - ATS, plataformas de e-mail, etc.). É crucial que a plataforma funcione de forma eficiente sem consumir recursos excessivos que impactem negativamente outras aplicações. A capacidade de coexistir e interoperar sem conflitos garante uma experiência fluida e profissional.
 
 </ol>
 
@@ -170,9 +169,9 @@ A definição clara do escopo é fundamental para a execução do projeto.
 ### 6.1 Objetos de Avaliação
 
 <ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
-* O processo de **edição e salvamento de informações** na seção "Experiência" do perfil.
-* A funcionalidade de **busca de vagas**, aplicando pelo menos três filtros (ex: cargo, localidade e tipo de vaga).
-* O fluxo de **candidatura simplificada** ("Easy Apply").
+<li>O processo de <b>edição e salvamento de informações</b> na seção "Experiência" do perfil.
+<li>A funcionalidade de <b>busca de vagas</b>, aplicando pelo menos três filtros (ex: cargo, localidade e tipo de vaga).
+<li>O fluxo de <b>candidatura simplificada</b> ("Easy Apply").
 </ul>
 
 
@@ -205,17 +204,21 @@ O software avaliado se conecta com os seguintes Objetivos de Desenvolvimento Sus
 
 <ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
 <li>Justificativa do Vínculo: O LinkedIn é uma ferramenta global que visa promover o emprego pleno e produtivo. Ele conecta diretamente profissionais a oportunidades de trabalho, facilitando o acesso ao mercado e fomentando o crescimento econômico.
-<li>Metas Associadas:
-        <li>Meta 8.5: "Até 2030, alcançar o emprego pleno e produtivo e trabalho decente para todas as mulheres e homens, inclusive para os jovens e as pessoas com deficiência, e remuneração igual para trabalho de igual valor."
-        <li>Meta 8.6: "Até 2020, reduzir substancialmente a proporção de jovens sem emprego, educação ou formação."
+<li><b>Metas Associadas</b>:
+<ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
+    <li>Meta 8.5: "Até 2030, alcançar o emprego pleno e produtivo e trabalho decente para todas as mulheres e homens, inclusive para os jovens e as pessoas com deficiência, e remuneração igual para trabalho de igual valor."
+    <li>Meta 8.6: "Até 2020, reduzir substancialmente a proporção de jovens sem emprego, educação ou formação."
+</ul>
 </ul>
 
 ### 7.2 ODS 10: Redução das Desigualdades
 
 <ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
 <li>Justificativa do Vínculo: Ao democratizar o acesso a vagas de emprego em diferentes regiões e setores, o LinkedIn tem o potencial de reduzir desigualdades de oportunidades, permitindo que talentos de diversas origens sejam encontrados por empresas globais.
-    <li>Meta Associada:*
+    <li><b>Meta Associada</b>:
+<ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
         <li>Meta 10.2: "Até 2030, empoderar e promover a inclusão social, econômica e política de todos, independentemente da idade, gênero, deficiência, raça, etnia, origem, religião, condição econômica ou outra."
+</ul>
 </ul>
 
 ## 8. Histórico de Versões 
@@ -225,4 +228,5 @@ O software avaliado se conecta com os seguintes Objetivos de Desenvolvimento Sus
 | Versão |Descrição     |Autor                                       |Data    |Revisor|
 |:-:     | :-:          | :-:                                        | :-:        |:-:|
 |1.0     |Criação do documento| [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo)| 28/09/2025 | Todos |
-|1.1     |Edição do documento| [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo)| 28/09/2025 | Todos |
+|1.1     | Adição de características escolhidas e representação gráfica| [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo)| 28/09/2025 | Todos |
+|1.2     | Corrige formatação | [Mayara Marques](https://github.com/maymarquee)| 30/09/2025 | [Maria Eduarda Pereira](https://github.com/maaduh) |
