@@ -179,7 +179,7 @@ A definição clara do escopo é fundamental para a execução do projeto.
 
 <ul style="text-align: justify; padding-left: 4em; margin-top: 0.5em;">
 <li><b>Adequação Funcional</b>: A análise verificará se os filtros de busca de vagas operam corretamente (Correção Funcional) e se o formulário de candidatura contém os campos essenciais para o processo (Completude Funcional)..
-<li><b>Compatibilidade (Coexistência)</b>: Serão realizados testes de uso da plataforma em diferentes navegadores (ex: Chrome, Firefox com extensões ativas) para observar o consumo de recursos (CPU, memória) e verificar se há impacto negativo no desempenho de outras aplicações abertas simultaneamente.
+<li><b>Compatibilidade (Coexistência)</b>: Serão realizados testes de uso da plataforma em diferentes navegadores, sendo eles Chrome, Firefox com extensões ativas, para observar o consumo de recursos (CPU, memória) e verificar se há impacto negativo no desempenho de outras aplicações abertas simultaneamente.
 </ul>
 
 ### 6.3 Fora do Escopo
@@ -230,3 +230,4 @@ O software avaliado se conecta com os seguintes Objetivos de Desenvolvimento Sus
 |1.0     |Criação do documento| [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo)| 28/09/2025 | Todos |
 |1.1     | Adição de características escolhidas e representação gráfica| [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo)| 28/09/2025 | Todos |
 |1.2     | Corrige formatação | [Mayara Marques](https://github.com/maymarquee)| 30/09/2025 | [Maria Eduarda Pereira](https://github.com/maaduh) |
+|1.3     | Corrige formatação | [João Moreira](https://github.com/joaofmoreiraa)| 30/09/2025 | [Mayara Marques](https://github.com/maymarquee) |
