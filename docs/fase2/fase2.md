@@ -2,16 +2,23 @@
 
 ## 1. Introdução
 
-O objetivo da Fase 2: Especificar a Avaliação é detalhar, de forma objetiva, como as características de qualidade selecionadas **(Adequação Funcional e Compatibilidade)** serão medidas e julgadas.
+<div style="text-align: justify; text-indent: 2cm;">
+O objetivo da Fase 2: Especificar a Avaliação é detalhar, de forma objetiva, como as características de qualidade selecionadas <b>(Adequação Funcional e Compatibilidade)</b> serão medidas e julgadas.
+</div>
 
+<div style="text-align: justify; text-indent: 2cm;">
 Para garantir que a avaliação seja repetível, reprodutível e rastreável, esta fase será estruturada utilizando o Goal-Question-Metric (GQM) Framework. O GQM conecta os objetivos de alto nível (Goal) estabelecidos na Fase 1 às perguntas de avaliação (Question) e, por fim, às medidas concretas (Metric) que serão coletadas na Fase 4.
+</div>
 
-
+<div style="text-align: justify; text-indent: 2cm;">
 As métricas definidas a seguir, juntamente com seus níveis de pontuação e critérios de julgamento, servirão de insumo direto para a Fase 3.
+</div>
 
 ## 2. Adequação Funcional
 
-A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funcionalidades necessárias para atender aos objetivos do usuário na sua jornada como candidato. Esta é uma característica de Prioridade Alta, pois é a base da proposta de valor da plataforma. As subcaracterísticas analisadas são: **Correção Funcional e Completude Funcional**.
+<div style="text-align: justify; text-indent: 2cm;">
+A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funcionalidades necessárias para atender aos objetivos do usuário na sua jornada como candidato. Esta é uma característica de Prioridade Alta, pois é a base da proposta de valor da plataforma. As subcaracterísticas analisadas são: <b>Correção Funcional e Completude Funcional</b>.
+</div>
 
 ### 2.1 GQM
 
@@ -52,7 +59,9 @@ A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
 
 ## 3. Compatibilidade
 
-A Compatibilidade refere-se à capacidade do produto de coexistir e trocar informações com outros sistemas, compartilhando o mesmo ambiente e recursos. Esta característica também é de Prioridade Alta porque conflitos de recursos ou problemas de integração prejudicam a experiência fluida e profissional. A subcaracterística analisada é a **Coexistência**.
+<div style="text-align: justify; text-indent: 2cm;">
+A Compatibilidade refere-se à capacidade do produto de coexistir e trocar informações com outros sistemas, compartilhando o mesmo ambiente e recursos. Esta característica também é de Prioridade Alta porque conflitos de recursos ou problemas de integração prejudicam a experiência fluida e profissional. A subcaracterística analisada é a <b>Coexistência</b>.
+</div>
 
 ### 3.1 GQM
 
