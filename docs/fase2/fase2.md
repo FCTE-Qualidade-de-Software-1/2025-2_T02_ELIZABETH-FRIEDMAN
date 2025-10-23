@@ -14,13 +14,33 @@ Para garantir que a avaliação seja repetível, reprodutível e rastreável, es
 As métricas definidas a seguir, juntamente com seus níveis de pontuação e critérios de julgamento, servirão de insumo direto para a Fase 3.
 </div>
 
-## 2. Adequação Funcional
+## 2. Objetivos
+
+<div style="text-align: justify; text-indent: 2cm;">
+Os objetivos desssa medição são com base nas prioridades das funcionalidades do LinkedIn, considerando suas características, usando a perspectiva de usuário final da aplicação. 
+</div>
+| Característica de Qualidade | Objetivo (Goal) GQM |
+| :--- | :--- |
+| **Adequação Funcional** | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário, na perspectiva de um candidato. |
+| **Compatibilidade** | **G2 (Geral):** Garantir que o LinkedIn funcione harmoniosamente no ambiente operacional do usuário, coexistindo de forma eficiente com outros softwares. |
+
+<div style="text-align: justify; text-indent: 2cm;">
+Agora, para as subcaracterísticas, também podemos especificar os objetivos:
+</div>
+
+| Subcaracterística | Característica Principal | Objetivo (Goal) GQM |
+| :--- | :--- | :--- |
+| **Correção Funcional** | Adequação Funcional | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. |
+| **Completude Funcional** | Adequação Funcional | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. |
+| **Coexistência** | Compatibilidade | **G2 (Geral):** Garantir que o LinkedIn funcione harmoniosamente no ambiente operacional do usuário. |
+
+## 3. Adequação Funcional
 
 <div style="text-align: justify; text-indent: 2cm;">
 A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funcionalidades necessárias para atender aos objetivos do usuário na sua jornada como candidato. Esta é uma característica de Prioridade Alta, pois é a base da proposta de valor da plataforma. As subcaracterísticas analisadas são: <b>Correção Funcional e Completude Funcional</b>.
 </div>
 
-### 2.1 GQM
+### 3.1 GQM
 
 <font size="3"><p style="text-align: center">Tabela 1: GQM - Adequação Funcional</p></font>
 
@@ -29,7 +49,7 @@ A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funci
 | Correção Funcional   | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. | **Q1:** Os filtros de busca de vagas operam corretamente, garantindo que os resultados correspondam precisamente aos critérios aplicados? | **M1.1.1 - Taxa de Conformidade de Busca:** Proporção de resultados de vagas (em amostra de N=20) que estritamente obedecem aos filtros utilizados.            |
 | Completude Funcional | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. | **Q2:** O formulário de candidatura simplificada ("Easy Apply") contém os campos essenciais para a conclusão do processo?                 | **M1.2.2 - Completude de Campos Críticos:** Porcentagem de campos críticos (ex: anexo de CV) presentes e funcionais no formulário de candidatura simplificada. |
 
-### 2.2 Níveis de Pontuação e Critérios para Julgamento
+### 3.2 Níveis de Pontuação e Critérios para Julgamento
 
 A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
 
@@ -57,13 +77,13 @@ A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
 | 2     | Insuficiente | 70% ≤ Campos < 80%                  | **Não-Conformidade Menor:** A ausência de um campo crítico gera retrabalho no usuário                                 |
 | 1     | Crítico      | Campos < 70%                        | **Não-Conformidade Crítica:** A falta de campos essenciais (ex: Anexo de CV) impede a conclusão eficaz da candidatura |
 
-## 3. Compatibilidade
+## 4. Compatibilidade
 
 <div style="text-align: justify; text-indent: 2cm;">
 A Compatibilidade refere-se à capacidade do produto de coexistir e trocar informações com outros sistemas, compartilhando o mesmo ambiente e recursos. Esta característica também é de Prioridade Alta porque conflitos de recursos ou problemas de integração prejudicam a experiência fluida e profissional. A subcaracterística analisada é a <b>Coexistência</b>.
 </div>
 
-### 3.1 GQM
+### 4.1 GQM
 
 <font size="3"><p style="text-align: center">Tabela 4: GQM - Compatibilidade</p></font>
 
@@ -71,7 +91,7 @@ A Compatibilidade refere-se à capacidade do produto de coexistir e trocar infor
 | ----------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Coexistência      | **G2 (Geral):** Garantir que o LinkedIn funcione harmoniosamente no ambiente operacional do usuário. | **Q3:** O uso do LinkedIn em navegadores com extensões causa um consumo de CPU/Memória que gere impacto negativo no desempenho geral do sistema? | **M2.1.1 - Pico de Consumo de Recursos:** O pico máximo de consumo de CPU (%) e Memória (MB) do processo do navegador (Chrome/Firefox) durante a execução de um objeto de avaliação. |
 
-### 3.2 Níveis de Pontuação e Critérios para Julgamento
+### 4.2 Níveis de Pontuação e Critérios para Julgamento
 
 A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
 
@@ -87,7 +107,7 @@ A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
 | 2     | Insuficiente | CPU < 40% ou Memória < 1200MB | **Não-Conformidade Menor:** O consumo pode afetar o desempenho de outras aplicações                      |
 | 1     | Crítico      | CPU ≥ 40% ou Memória ≥ 1200MB | **Não-Conformidade Crítica:** Consumo excessivo que compromete a estabilidade do ambiente (Coexistência) |
 
-## 4. Histórico de Versões 
+## 5. Histórico de Versões 
 
 <font size="3"><p style="text-align: center">Tabela 6: Histórico de versões</p></font>
 
@@ -97,3 +117,4 @@ A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
 |  1.1   |                Adição da introdução e GQM's                | [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo) | 14/10/2025 |  Todos  |
 |  1.2   | Adição dos Níveis de Pontuação e Critérios para Julgamento | [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo) | 14/10/2025 |  Todos  |
 |  1.3   |                 Ajuste de erro de escrita                  |                                                                                                                          [Bruno Cruz](https://github.com/brunocrzz)                                                                                                                           | 15/10/2025 |    -    |
+|  1.4   |                 Adiciona objetivos                  |                                                                                                                          [Mayara Marques](https://github.com/maymarquee)                                                                                                                           | 23/10/2025 |    [Gabriel Mendes](https://github.com/gbevi)    |
