@@ -1,4 +1,4 @@
-# Fase 2 - Especificar a avaliação
+# Fase 2 - Especificar a Avaliação (Versão Revisada e Expandida)
 
 ## 1. Introdução
 
@@ -7,75 +7,100 @@ O objetivo da Fase 2: Especificar a Avaliação é detalhar, de forma objetiva, 
 </div>
 
 <div style="text-align: justify; text-indent: 2cm;">
-Para garantir que a avaliação seja repetível, reprodutível e rastreável, esta fase será estruturada utilizando o Goal-Question-Metric (GQM) Framework. O GQM conecta os objetivos de alto nível (Goal) estabelecidos na Fase 1 às perguntas de avaliação (Question) e, por fim, às medidas concretas (Metric) que serão coletadas na Fase 4.
+Para garantir que a avaliação seja repetível, reprodutível e rastreável, esta fase será estruturada utilizando o <b>Goal-Question-Metric (GQM) Framework</b>. O GQM conecta os objetivos de alto nível (Goal) estabelecidos na Fase 1 às perguntas de avaliação (Question) e, por fim, às medidas concretas (Metric) que serão coletadas na Fase 4.
 </div>
 
 <div style="text-align: justify; text-indent: 2cm;">
 As métricas definidas a seguir, juntamente com seus níveis de pontuação e critérios de julgamento, servirão de insumo direto para a Fase 3.
 </div>
 
+---
+
 ## 2. Objetivos
 
-<div style="text-align: justify; text-indent: 2cm;">
-Os objetivos desssa medição são com base nas prioridades das funcionalidades do LinkedIn, considerando suas características, usando a perspectiva de usuário final da aplicação. 
-</div>
 | Característica de Qualidade | Objetivo (Goal) GQM |
 | :--- | :--- |
 | **Adequação Funcional** | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário, na perspectiva de um candidato. |
 | **Compatibilidade** | **G2 (Geral):** Garantir que o LinkedIn funcione harmoniosamente no ambiente operacional do usuário, coexistindo de forma eficiente com outros softwares. |
 
-<div style="text-align: justify; text-indent: 2cm;">
-Agora, para as subcaracterísticas, também podemos especificar os objetivos:
-</div>
-
-| Subcaracterística | Característica Principal | Objetivo (Goal) GQM |
-| :--- | :--- | :--- |
-| **Correção Funcional** | Adequação Funcional | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. |
-| **Completude Funcional** | Adequação Funcional | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. |
-| **Coexistência** | Compatibilidade | **G2 (Geral):** Garantir que o LinkedIn funcione harmoniosamente no ambiente operacional do usuário. |
+---
 
 ## 3. Adequação Funcional
 
 <div style="text-align: justify; text-indent: 2cm;">
-A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funcionalidades necessárias para atender aos objetivos do usuário na sua jornada como candidato. Esta é uma característica de Prioridade Alta, pois é a base da proposta de valor da plataforma. As subcaracterísticas analisadas são: <b>Correção Funcional e Completude Funcional</b>.
+A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funcionalidades necessárias para atender aos objetivos do usuário na sua jornada como candidato. Esta é uma característica de Prioridade Alta, pois é a base da proposta de valor da plataforma. As subcaracterísticas analisadas são: <b>Correção Funcional</b> e <b>Completude Funcional</b>.
 </div>
 
 ### 3.1 GQM
 
 <font size="3"><p style="text-align: center">Tabela 1: GQM - Adequação Funcional</p></font>
 
-| Subcaracterística    | Objetivo (Goal)                                                                                                         | Questão (Question)                                                                                                                        | Métrica (Metric)                                                                                                                                               |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Correção Funcional   | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. | **Q1:** Os filtros de busca de vagas operam corretamente, garantindo que os resultados correspondam precisamente aos critérios aplicados? | **M1.1.1 - Taxa de Conformidade de Busca:** Proporção de resultados de vagas (em amostra de N=20) que estritamente obedecem aos filtros utilizados.            |
-| Completude Funcional | **G1 (Geral):** Assegurar a eficácia das funcionalidades essenciais do LinkedIn para o sucesso profissional do usuário. | **Q2:** O formulário de candidatura simplificada ("Easy Apply") contém os campos essenciais para a conclusão do processo?                 | **M1.2.2 - Completude de Campos Críticos:** Porcentagem de campos críticos (ex: anexo de CV) presentes e funcionais no formulário de candidatura simplificada. |
+| Subcaracterística | Objetivo (Goal) | Questão (Question) | Métricas (Metrics) |
+| :--- | :--- | :--- | :--- |
+| **Correção Funcional** | Assegurar a eficácia das funcionalidades essenciais do LinkedIn. | Os filtros de busca e recursos de candidatura operam corretamente, entregando resultados fiéis aos critérios? | **M1.1.1 - Taxa de Conformidade de Busca**<br>**M1.1.2 - Taxa de Erro de Candidatura**<br>**M1.1.3 - Tempo Médio de Resposta da Função de Busca** |
+| **Completude Funcional** | Assegurar a integralidade das funções essenciais ao usuário. | O sistema disponibiliza todos os campos e recursos necessários para a execução completa de uma tarefa? | **M1.2.1 - Completude de Campos Críticos**<br>**M1.2.2 - Cobertura de Funcionalidades Relevantes**<br>**M1.2.3 - Disponibilidade de Recursos Complementares (ex: salvar vaga, alertas)** |
+
+---
 
 ### 3.2 Níveis de Pontuação e Critérios para Julgamento
 
-A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
+A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente), mas os faróis são ajustados conforme a natureza da métrica.
 
-#### M1.1.1 - Taxa de Conformidade de Busca (Correção Funcional)
+#### M1.1.1 - Taxa de Conformidade de Busca
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | 100% | **Excelente (Verde):** Nenhum resultado incorreto encontrado. |
+| 4 | 95–99% | **Bom (Verde):** Resultados precisos, falhas mínimas. |
+| 3 | 85–94% | **Aceitável (Amarelo):** Pequenas inconsistências ocasionais. |
+| 2 | 70–84% | **Insuficiente (Laranja):** Filtros inconsistentes impactam a confiabilidade. |
+| 1 | < 70% | **Crítico (Vermelho):** Resultados incorretos comprometem a função principal. |
 
-<font size="3"><p style="text-align: center">Tabela 2: Níveis e critérios de Julgamento da Métrica 1.1.1</p></font>
+#### M1.1.2 - Taxa de Erro de Candidatura
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | 0% | **Excelente (Verde):** Nenhum erro ao enviar candidatura. |
+| 4 | 1–5% | **Bom (Verde):** Erros pontuais, não recorrentes. |
+| 3 | 6–10% | **Aceitável (Amarelo):** Alguns erros recuperáveis. |
+| 2 | 11–20% | **Insuficiente (Laranja):** Falhas frequentes que impactam o uso. |
+| 1 | > 20% | **Crítico (Vermelho):** Envio de candidatura frequentemente falha. |
 
-| Nível | Pontuação    | Descrição do Nível | Critério de Julgamento                                                                              |
-| ----- | ------------ | ------------------ | --------------------------------------------------------------------------------------------------- |
-| 5     | Excelente    | Taxa = 100%        | **Aceitável:** A funcionalidade é totalmente correta e atende plenamente ao objetivo                |
-| 4     | Bom          | 95% ≤ Taxa < 100%  | **Aceitável:** Pequenas falhas que não comprometem o resultado                                      |
-| 3     | Mediano      | 85% ≤ Taxa < 95%   | **Aceitável com Ressalvas:** Necessita de monitoramento/pequena correção                            |
-| 2     | Insuficiente | 70% ≤ Taxa < 85%   | **Não-Conformidade Menor:** Afeta a confiabilidade dos resultados                                   |
-| 1     | Crítico      | Taxa < 70%         | **Não-Conformidade Crítica:** A falha no filtro compromete a principal proposta de valor do produto |
+#### M1.1.3 - Tempo Médio de Resposta da Função de Busca
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | ≤ 1s | **Excelente (Verde):** Resposta instantânea e fluida. |
+| 4 | 1–2s | **Bom (Verde):** Leve latência, mas aceitável. |
+| 3 | 2–4s | **Aceitável (Amarelo):** Perceptível, mas sem prejuízo relevante. |
+| 2 | 4–6s | **Insuficiente (Laranja):** Lentidão que afeta a experiência. |
+| 1 | > 6s | **Crítico (Vermelho):** Tempo excessivo de resposta. |
 
-#### M1.2.1 - Completude de Campos Críticos (Completude Funcional)
+#### M1.2.1 - Completude de Campos Críticos
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | 100% | **Excelente (Verde):** Todos os campos críticos presentes e funcionais. |
+| 4 | 90–99% | **Bom (Verde):** Poucos campos secundários ausentes. |
+| 3 | 80–89% | **Aceitável (Amarelo):** Falta de campo importante, mas não impeditiva. |
+| 2 | 70–79% | **Insuficiente (Laranja):** Campos críticos ausentes geram retrabalho. |
+| 1 | < 70% | **Crítico (Vermelho):** Falta de campos essenciais impede a conclusão da tarefa. |
 
-<font size="3"><p style="text-align: center">Tabela 3: Níveis e critérios de Julgamento da Métrica 1.2.1</p></font>
+#### M1.2.2 - Cobertura de Funcionalidades Relevantes
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | ≥ 95% | **Excelente (Verde):** Todas as funcionalidades relevantes implementadas. |
+| 4 | 85–94% | **Bom (Verde):** Funções principais presentes, poucas faltantes. |
+| 3 | 75–84% | **Aceitável (Amarelo):** Algumas lacunas relevantes. |
+| 2 | 60–74% | **Insuficiente (Laranja):** Várias funções relevantes ausentes. |
+| 1 | < 60% | **Crítico (Vermelho):** Grande parte das funcionalidades ausentes. |
 
-| Nível | Pontuação    | Descrição do Nível                  | Critério de Julgamento                                                                                                |
-| ----- | ------------ | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 5     | Excelente    | 100% dos campos críticos presentes. | **Satisfatória:** O conjunto de funções é completo para a tarefa de candidatura                                       |
-| 4     | Bom          | 90% ≤ Campos < 100%                 | **Satisfatória:** Pequena ausência de campos acessórios não-críticos                                                  |
-| 3     | Mediano      | 80% ≤ Campos < 90%                  | **Aceitável com Ressalvas:** Ausência de campo importante, mas que não impede a conclusão                             |
-| 2     | Insuficiente | 70% ≤ Campos < 80%                  | **Não-Conformidade Menor:** A ausência de um campo crítico gera retrabalho no usuário                                 |
-| 1     | Crítico      | Campos < 70%                        | **Não-Conformidade Crítica:** A falta de campos essenciais (ex: Anexo de CV) impede a conclusão eficaz da candidatura |
+#### M1.2.3 - Disponibilidade de Recursos Complementares
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | ≥ 95% de disponibilidade | **Excelente (Verde):** Recursos complementares (alertas, salvar vaga) sempre disponíveis. |
+| 4 | 90–94% | **Bom (Verde):** Alta disponibilidade, pequenas interrupções. |
+| 3 | 80–89% | **Aceitável (Amarelo):** Intermitências ocasionais. |
+| 2 | 70–79% | **Insuficiente (Laranja):** Recursos frequentemente indisponíveis. |
+| 1 | < 70% | **Crítico (Vermelho):** Recursos quase sempre inoperantes. |
+
+---
 
 ## 4. Compatibilidade
 
@@ -85,36 +110,52 @@ A Compatibilidade refere-se à capacidade do produto de coexistir e trocar infor
 
 ### 4.1 GQM
 
-<font size="3"><p style="text-align: center">Tabela 4: GQM - Compatibilidade</p></font>
+<font size="3"><p style="text-align: center">Tabela 2: GQM - Compatibilidade</p></font>
 
-| Subcaracterística | Objetivo (Goal)                                                                                      | Questão (Question)                                                                                                                               | Métrica (Metric)                                                                                                                                                                     |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Coexistência      | **G2 (Geral):** Garantir que o LinkedIn funcione harmoniosamente no ambiente operacional do usuário. | **Q3:** O uso do LinkedIn em navegadores com extensões causa um consumo de CPU/Memória que gere impacto negativo no desempenho geral do sistema? | **M2.1.1 - Pico de Consumo de Recursos:** O pico máximo de consumo de CPU (%) e Memória (MB) do processo do navegador (Chrome/Firefox) durante a execução de um objeto de avaliação. |
+| Subcaracterística | Objetivo (Goal) | Questão (Question) | Métricas (Metrics) |
+| :--- | :--- | :--- | :--- |
+| **Coexistência** | Garantir funcionamento harmonioso no ambiente do usuário. | O LinkedIn mantém bom desempenho mesmo com outras aplicações e extensões em execução? | **M2.1.1 - Pico de Consumo de Recursos (CPU/Memória)**<br>**M2.1.2 - Taxa de Conflito com Extensões de Navegador**<br>**M2.1.3 - Tempo Médio de Recuperação após Travamento** |
+
+---
 
 ### 4.2 Níveis de Pontuação e Critérios para Julgamento
 
-A pontuação é baseada em uma escala de 1 (Crítico) a 5 (Excelente).
+#### M2.1.1 - Pico de Consumo de Recursos
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | CPU < 10%, RAM < 500MB | **Excelente (Verde):** Uso mínimo, sem impacto perceptível. |
+| 4 | CPU < 20%, RAM < 800MB | **Bom (Verde):** Uso leve, estável. |
+| 3 | CPU < 30%, RAM < 1000MB | **Aceitável (Amarelo):** Consumo médio, monitorável. |
+| 2 | CPU < 40%, RAM < 1200MB | **Insuficiente (Laranja):** Pode causar lentidão. |
+| 1 | CPU ≥ 40% ou RAM ≥ 1200MB | **Crítico (Vermelho):** Compromete a estabilidade do sistema. |
 
-#### M2.1.1 - Pico de Consumo de Recursos 
+#### M2.1.2 - Taxa de Conflito com Extensões de Navegador
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | 0% de conflito | **Excelente (Verde):** Nenhum problema de compatibilidade. |
+| 4 | 1–5% | **Bom (Verde):** Conflitos raros e isolados. |
+| 3 | 6–10% | **Aceitável (Amarelo):** Conflitos ocasionais sem perda de funcionalidade. |
+| 2 | 11–20% | **Insuficiente (Laranja):** Conflitos frequentes. |
+| 1 | > 20% | **Crítico (Vermelho):** Conflitos graves impedem o uso normal. |
 
-<font size="3"><p style="text-align: center">Tabela 5: Níveis e critérios de Julgamento da Métrica 2.1.1</p></font>
+#### M2.1.3 - Tempo Médio de Recuperação após Travamento
+| Nível | Pontuação | Critério de Julgamento |
+| :--- | :--- | :--- |
+| 5 | ≤ 2s | **Excelente (Verde):** Recuperação imediata. |
+| 4 | 3–5s | **Bom (Verde):** Rápida retomada de operação. |
+| 3 | 6–10s | **Aceitável (Amarelo):** Recuperação perceptível. |
+| 2 | 11–20s | **Insuficiente (Laranja):** Lentidão na retomada. |
+| 1 | > 20s | **Crítico (Vermelho):** Sistema exige reinício manual. |
 
-| Nível | Pontuação    | Descrição do Nível            | Critério de Julgamento                                                                                   |
-| ----- | ------------ | ----------------------------- | -------------------------------------------------------------------------------------------------------- |
-| 5     | Excelente    | CPU < 10% e Memória < 500MB   | **Satisfatória:** O aplicativo coexiste de forma eficiente e sem conflitos                               |
-| 4     | Bom          | CPU < 20% e Memória < 800MB   | **Satisfatória:** Consumo aceitável, sem impacto negativo percebido                                      |
-| 3     | Mediano      | CPU < 30% e Memória < 1000MB  | **Aceitável com Ressalvas:** Alto, mas dentro da margem de tolerância                                    |
-| 2     | Insuficiente | CPU < 40% ou Memória < 1200MB | **Não-Conformidade Menor:** O consumo pode afetar o desempenho de outras aplicações                      |
-| 1     | Crítico      | CPU ≥ 40% ou Memória ≥ 1200MB | **Não-Conformidade Crítica:** Consumo excessivo que compromete a estabilidade do ambiente (Coexistência) |
+---
 
-## 5. Histórico de Versões 
+## 5. Histórico de Versões
 
-<font size="3"><p style="text-align: center">Tabela 6: Histórico de versões</p></font>
-
-| Versão |                         Descrição                          |                                                                                                                                             Autor                                                                                                                                             |    Data    | Revisor |
-| :----: | :--------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------: | :-----: |
-|  1.0   |                    Criação do documento                    | [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo) | 14/10/2025 |  Todos  |
-|  1.1   |                Adição da introdução e GQM's                | [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo) | 14/10/2025 |  Todos  |
-|  1.2   | Adição dos Níveis de Pontuação e Critérios para Julgamento | [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo) | 14/10/2025 |  Todos  |
-|  1.3   |                 Ajuste de erro de escrita                  |                                                                                                                          [Bruno Cruz](https://github.com/brunocrzz)                                                                                                                           | 15/10/2025 |    -    |
-|  1.4   |                 Adiciona objetivos                  |                                                                                                                          [Mayara Marques](https://github.com/maymarquee)                                                                                                                           | 23/10/2025 |    [Gabriel Mendes](https://github.com/gbevi)    |
+| Versão | Descrição | Autor | Data | Revisor |
+| :---: | :--- | :--- | :---: | :---: |
+| 1.0 | Criação do documento | [Bruno Cruz](https://github.com/brunocrzz), [Gabriel Mendes](https://github.com/gbevi), [João Moreira](https://github.com/joaofmoreiraa), [Maria Eduarda Pereira](https://github.com/maaduh), [Mayara Marques](https://github.com/maymarquee), [Pedro Túlio](https://github.com/PedrooCamilo) | 14/10/2025 | Todos |
+| 1.1 | Adição da introdução e GQM's | Mesmo autores | 14/10/2025 | Todos |
+| 1.2 | Adição dos Níveis de Pontuação e Critérios para Julgamento | Mesmo autores | 14/10/2025 | Todos |
+| 1.3 | Ajuste de erro de escrita | [Bruno Cruz](https://github.com/brunocrzz) | 15/10/2025 | - |
+| 1.4 | Adiciona objetivos | [Mayara Marques](https://github.com/maymarquee) | 23/10/2025 | [Gabriel Mendes](https://github.com/gbevi) |
+| 1.5 | Inclusão de novas métricas e detalhamento dos critérios | [Gabriel Mendes](https://github.com/gbevi) | 24/10/2025 | Todos |
