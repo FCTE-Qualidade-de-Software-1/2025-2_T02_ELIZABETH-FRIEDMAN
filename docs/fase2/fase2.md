@@ -1,4 +1,4 @@
-# Fase 2 - Especificar a Avaliação (Versão Revisada e Expandida)
+# Fase 2 - Especificar a Avaliação
 
 ## 1. Introdução
 
@@ -37,8 +37,8 @@ A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funci
 
 | Subcaracterística | Objetivo (Goal) | Questão (Question) | Métricas (Metrics) |
 | :--- | :--- | :--- | :--- |
-| **Correção Funcional** | Assegurar a eficácia das funcionalidades essenciais do LinkedIn. | Os filtros de busca e recursos de candidatura operam corretamente, entregando resultados fiéis aos critérios? | **M1.1.1 - Taxa de Conformidade de Busca**<br>**M1.1.2 - Taxa de Erro de Candidatura**<br>**M1.1.3 - Tempo Médio de Resposta da Função de Busca** |
-| **Completude Funcional** | Assegurar a integralidade das funções essenciais ao usuário. | O sistema disponibiliza todos os campos e recursos necessários para a execução completa de uma tarefa? | **M1.2.1 - Completude de Campos Críticos**<br>**M1.2.2 - Cobertura de Funcionalidades Relevantes**<br>**M1.2.3 - Disponibilidade de Recursos Complementares (ex: salvar vaga, alertas)** |
+| **Correção Funcional** | Assegurar a eficácia das funcionalidades essenciais do LinkedIn. | **Q1:** Qual o grau de precisão e confiabilidade das funções críticas do sistema? | **M1.1.1 - Taxa de Conformidade de Busca**<br>**M1.1.2 - Taxa de Erro de Candidatura**<br>**M1.1.3 - Tempo Médio de Resposta da Função de Busca** |
+| **Completude Funcional** | Assegurar a integralidade das funções essenciais ao usuário. | **Q2:** O conjunto de funcionalidades oferecidas é suficiente e completo para o sucesso das tarefas do usuário? | **M1.2.1 - Completude de Campos Críticos**<br>**M1.2.2 - Cobertura de Funcionalidades Relevantes**<br>**M1.2.3 - Disponibilidade de Recursos Complementares (ex: salvar vaga, alertas)** |
 
 ---
 
@@ -114,7 +114,7 @@ A Compatibilidade refere-se à capacidade do produto de coexistir e trocar infor
 
 | Subcaracterística | Objetivo (Goal) | Questão (Question) | Métricas (Metrics) |
 | :--- | :--- | :--- | :--- |
-| **Coexistência** | Garantir funcionamento harmonioso no ambiente do usuário. | O LinkedIn mantém bom desempenho mesmo com outras aplicações e extensões em execução? | **M2.1.1 - Pico de Consumo de Recursos (CPU/Memória)**<br>**M2.1.2 - Taxa de Conflito com Extensões de Navegador**<br>**M2.1.3 - Tempo Médio de Recuperação após Travamento** |
+| **Coexistência** | Garantir funcionamento harmonioso no ambiente do usuário. | **Q3:** O uso da aplicação interfere negativamente no desempenho de outras aplicações no ambiente operacional do usuário? | **M2.1.1 - Pico de Consumo de Recursos (CPU/Memória)**<br>**M2.1.2 - Taxa de Conflito com Extensões de Navegador**<br>**M2.1.3 - Tempo Médio de Recuperação após Travamento** |
 
 ---
 
@@ -159,3 +159,4 @@ A Compatibilidade refere-se à capacidade do produto de coexistir e trocar infor
 | 1.3 | Ajuste de erro de escrita | [Bruno Cruz](https://github.com/brunocrzz) | 15/10/2025 | - |
 | 1.4 | Adiciona objetivos | [Mayara Marques](https://github.com/maymarquee) | 23/10/2025 | [Gabriel Mendes](https://github.com/gbevi) |
 | 1.5 | Inclusão de novas métricas e detalhamento dos critérios | [Gabriel Mendes](https://github.com/gbevi) | 24/10/2025 | Todos |
+| 1.6 | Refinamento das questões após PC2 | [Maria Eduarda Pereira](https://github.com/maaduh) | 24/10/2025 | [Mayara Marques](https://github.com/maymarquee) |
