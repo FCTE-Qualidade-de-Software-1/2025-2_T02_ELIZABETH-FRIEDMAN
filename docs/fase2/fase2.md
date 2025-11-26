@@ -87,6 +87,7 @@ A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funci
 | :------------------------ | :----------------------------- |
 | **Analisar:**             | Funções de busca e candidatura |
 | **Com o propósito de**    | Avaliar precisão               |
+| **Com respeito a**        | Correção Funcional             |
 | **Do ponto de vista de:** | Candidato a vagas              |
 | **No contexto de:**       | LinkedIn Web                   |
 
@@ -98,6 +99,7 @@ A Adequação Funcional refere-se à capacidade do LinkedIn de fornecer as funci
 | :------------------------ | :---------------------------------------- |
 | **Analisar:**             | Funcionalidades da jornada de candidatura |
 | **Com o propósito de**    | Verificar completude                      |
+| **Com respeito a**        | Completude Funcional                      |
 | **Do ponto de vista de:** | Usuário candidato                         |
 | **No contexto de:**       | Navegador Web (desktop)                   |
 
@@ -204,6 +206,7 @@ A Compatibilidade refere-se à capacidade do produto de coexistir e trocar infor
 | :------------------------ | :---------------------------------------------- |
 | **Analisar:**             | Comportamento do LinkedIn com outras aplicações |
 | **Com o propósito de**    | Avaliar coexistência                            |
+| **Com respeito a**        | Coexistência                                    |
 | **Do ponto de vista de:** | Usuário multitarefa                             |
 | **No contexto de:**       | Navegador Web com extensões                     |
 
