@@ -2,7 +2,86 @@
 
 ## 4.x Adequação Funcional
 
-### M1.2.1 — Completude de Campos Críticos (Experiência)
+### 1. Métrica M1.1.1 (Taxa de Conformidade de Busca) e M1.1.3 (Tempo de Resposta)
+
+#### 1.1 Metodologia da Coleta
+
+Conforme planejado na Fase 3, foram realizadas **10 execuções de busca** utilizando simultaneamente pelo menos três filtros (ex: Cargo + Localidade + Tipo de Vaga/Experiência).  
+O objetivo foi estressar a ferramenta para validar a precisão dos resultados e a performance da API.
+
+### Ferramentas utilizadas:
+
+- **M1.1.1:** Inspeção visual dos resultados retornados (amostra de até 10 itens).
+- **M1.1.3:** Chrome DevTools (Network Tab), filtrando pela requisição `voyagerJobsDashJobCards`.
+
+### Tabela de Registros (Dados Brutos)
+
+| Execução (#) | M1.1.3: Tempo (s) | M1.1.3: Tempo (ms) | M1.1.1: Aderência | % Conformidade | Observações |
+|--------------|-------------------|---------------------|-------------------|----------------|-------------|
+| 01 | 0,68 s | 680 ms | 10/10 | 100% | — |
+| 02 | 0,74 s | 740 ms | 10/10 | 100% | — |
+| 03 | 0,69 s | 690 ms | 10/10 | 100% | — |
+| 04 | 0,78 s | 780 ms | 10/10 | 100% | Pico de tempo registrado. |
+| 05 | 0,68 s | 680 ms | 10/10 | 100% | — |
+| 06 | 0,55 s | 550 ms | 8/8 | 100% | Retornou apenas 8 resultados totais, todos corretos. |
+| 07 | 0,75 s | 750 ms | 10/10 | 100% | — |
+| 08 | 0,71 s | 710 ms | 10/10 | 100% | — |
+| 09 | 0,61 s | 610 ms | 8/8 | 100% | Retornou apenas 8 resultados totais, todos corretos. |
+| 10 | 0,59 s | 590 ms | 2/2 | 100% | Filtro restritivo: apenas 2 resultados, ambos corretos. |
+
+### **RESULTADO**
+
+- **Média (s):** 0,678 s  
+- **Média (ms):** 678 ms  
+- **Total de Aderência:** 88/88 — **100%**
+
+---
+
+### 1.2 Análise e Julgamento dos Resultados
+
+#### A) Análise da M1.1.1 — Taxa de Conformidade de Busca
+
+**Resultado Obtido:** 100% de conformidade.
+
+**Critério de Julgamento (Tabela 5 da Fase 2):**  
+O resultado se enquadra no **Nível 5 - Excelente (Verde)**, que exige 100% de acerto ("Nenhum resultado incorreto encontrado").
+
+#### Validação da Hipótese H1.1
+
+- **Hipótese:** A H1.1 previa que, ao aplicar três filtros, a taxa cairia para um Nível Insuficiente (< 84%), esperando resultados irrelevantes.
+- **Conclusão:** A hipótese foi **REFUTADA POSITIVAMENTE**.  
+  O sistema demonstrou alta precisão e, em filtros restritivos, preferiu retornar menos resultados do que apresentar itens incorretos.
+
+---
+
+#### B) Análise da M1.1.3 — Tempo Médio de Resposta
+
+**Resultado Obtido:** 678 ms (0,67 s).
+
+**Critério de Julgamento (Tabela 7 da Fase 2):**  
+Classificação: **Nível 5 — Excelente (Verde)** (≤ 1 s).
+
+#### Validação da Hipótese H1.2
+
+- **Hipótese:** Esperava-se Nível Aceitável (2–4 s).
+- **Conclusão:** A hipótese foi **REFUTADA POSITIVAMENTE**.  
+  O tempo médio ficou abaixo de 700 ms e execuções com menos resultados foram mais rápidas, indicando otimização do payload.
+
+---
+
+### 1.3 Veredito Final (Correção Funcional — Busca)
+
+Com base nas métricas **M1.1.1** e **M1.1.3**, a funcionalidade de **Busca do LinkedIn Web foi classificada como _EXCELENTE_.**
+
+O sistema demonstrou ser capaz de lidar com consultas complexas mantendo:
+
+- **Tempo sub-segundo (< 1 s)**
+- **100% de precisão**
+- **Controle inteligente de resultados** (não preencher com itens incorretos)
+
+Mesmo com filtros restritivos, a ferramenta priorizou a qualidade dos dados e confirmou a robustez da API.
+
+## M1.2.1 — Completude de Campos Críticos (Experiência)
 
 * **Tipo de Medição:** Indireta (Checklist estruturado).  
 * **Responsável pela Coleta:** Gabriel Mendes.  
