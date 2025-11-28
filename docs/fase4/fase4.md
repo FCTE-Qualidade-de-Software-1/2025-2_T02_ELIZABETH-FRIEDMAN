@@ -81,6 +81,9 @@ O sistema demonstrou ser capaz de lidar com consultas complexas mantendo:
 
 Mesmo com filtros restritivos, a ferramenta priorizou a qualidade dos dados e confirmou a robustez da API.
 
+### Evidências
+[Vídeo dos testes](https://www.youtube.com/watch?v=qaoLFz5y2eY)
+
 ## M1.2.1 — Completude de Campos Críticos (Experiência)
 
 * **Tipo de Medição:** Indireta (Checklist estruturado).  
