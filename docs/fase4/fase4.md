@@ -1,5 +1,157 @@
 # Fase 4 - Executar a avaliação
 
+## 4.x Adequação Funcional
+
+### M1.2.1 — Completude de Campos Críticos (Experiência)
+
+* **Tipo de Medição:** Indireta (Checklist estruturado).  
+* **Responsável pela Coleta:** Gabriel Mendes.  
+* **Objetivo GQM:** Verificar se todos os campos essenciais da seção *Experiência* no LinkedIn Web estão presentes e funcionais.
+
+#### Metodologia da Coleta
+
+A coleta foi realizada conforme definido na Fase 3, utilizando **4 cenários específicos**:
+
+- Chrome-01 (sessão normal)  
+- Chrome-02 (modo anônimo)  
+- Safari-01 (sessão normal)  
+- Safari-02 (modo privado com restrições de cookies)
+
+Para cada cenário, foi executado um checklist vertical contendo **8 campos críticos** definidos na Fase 2: Cargo, Tipo de vínculo, Nome da empresa, Localidade, Modalidade, Data de início, Data de término e Descrição.
+
+Cada campo foi avaliado como:
+
+- **S** — Presente e funcional  
+- **N** — Ausente ou com comportamento inadequado
+
+---
+
+#### Resultados Brutos (Checklist)
+
+| Campo                  | Chrome-01 | Chrome-02 | Safari-01 | Safari-02 |
+|----------------------- |-----------|-----------|-----------|-----------|
+| Cargo                  | S         | S         | S         | S         |
+| Tipo de vínculo        | S         | S         | S         | S         |
+| Nome da empresa        | S         | S         | S         | S         |
+| Localidade             | S         | S         | S         | S         |
+| Modalidade             | S         | S         | S         | S         |
+| Data de início         | S         | S         | S         | S         |
+| Data de término        | S         | S         | S         | S         |
+| Descrição              | S         | S         | S         | S         |
+| **Total de Campos**    | **8**     | **8**     | **8**     | **8**     |
+| **% Completude**       | **100%**  | **100%**  | **100%**  | **100%**  |
+| **Nível**              | **5**     | **5**     | **5**     | **5**     |
+
+---
+
+### Análise Final da Métrica M1.2.1
+
+A métrica obteve **100% de completude** em todos os cenários, mantendo todos os campos essenciais disponíveis e funcionais.  
+Isso resulta em:
+
+> **Nível 5 — Excelente (Verde)**
+
+#### Relação com a Hipótese H2.1 (Fase 2)
+
+> *“A completude de campos críticos será de 100%.”*
+
+**Resultado:**  
+✔ *Hipótese Confirmada*
+
+O LinkedIn demonstra consistência total no módulo de Experiência, sem falhas, omissões ou comportamentos inesperados.
+
+### Evidências
+
+Todas as evidências de vídeo e prints de execução estão disponíveis no link abaixo:
+
+<div style="text-align: center;">
+    <font size="3"><p>Planilha de Evidências — M1.2.2</p></font>
+    <a href="https://unbbr-my.sharepoint.com/:x:/g/personal/222006605_aluno_unb_br/IQAeyXZ17yVpQpV9nSw38vuOAYoonlIwHQ9OnTSMqCuFL6M?e=0i6qSe" target="_blank"><b>Acesse aqui os vídeos e registros da execução</b></a>
+</div>
+
+---
+
+---
+
+### M1.2.2 — Cobertura de Funcionalidades Relevantes
+
+* **Tipo de Medição:** Indireta (Checklist funcional).  
+* **Responsável pela Coleta:** Gabriel Mendes.  
+* **Objetivo GQM:** Avaliar se as funcionalidades essenciais da jornada do candidato estão presentes e plenamente funcionais no LinkedIn Web.
+
+#### Metodologia da Coleta
+
+A coleta utilizou 4 cenários distintos:
+
+- Chrome-01 (normal)  
+- Chrome-Ext-02 (extensões ativas)  
+- Safari-01 (normal)  
+- Safari-Priv-02 (privado)
+
+Foram avaliadas 7 funcionalidades críticas:
+
+1. Buscar vaga  
+2. Aplicar candidatura  
+3. Salvar vaga  
+4. Criar alerta  
+5. Usar filtros  
+6. Ver detalhes da vaga  
+7. Ver vagas salvas  
+
+Cada funcionalidade foi marcada como:
+
+- **S** — Funcional e disponível  
+- **N** — Ausente ou com erro
+
+---
+
+#### Resultados Brutos (Checklist)
+
+| Funcionalidade         | Chrome-01 | Chrome-Ext-02 | Safari-01 | Safari-Priv-02 |
+|------------------------|-----------|----------------|-----------|-----------------|
+| Buscar vaga            | S         | S              | S         | S               |
+| Aplicar candidatura    | S         | S              | S         | S               |
+| Salvar vaga            | S         | S              | S         | S               |
+| Criar alerta           | S         | S              | S         | S               |
+| Usar filtros           | S         | S              | S         | S               |
+| Ver detalhes da vaga   | S         | S              | S         | S               |
+| Ver vagas salvas       | S         | S              | S         | S               |
+| **Total Funcionalidades** | **7** | **7**          | **7**     | **7**           |
+| **% Cobertura**        | **100%**  | **100%**       | **100%**  | **100%**        |
+| **Nível**              | **5**     | **5**          | **5**     | **5**           |
+
+---
+
+### Análise Final da Métrica M1.2.2
+
+Todas as funcionalidades críticas da jornada do candidato foram encontradas e funcionando corretamente em **100% dos cenários avaliados**.
+
+Resultado:
+
+> **Nível 5 — Excelente (Verde)**
+
+#### Relação com a Hipótese H2.2 (Fase 2)
+
+> *“A Cobertura de Funcionalidades será ≥ 95% (Nível Excelente).”*
+
+**Resultado:**  
+✔ *Hipótese Confirmada*
+
+O LinkedIn apresentou robustez funcional em todos os testes, mantendo toda a jornada do candidato acessível e estável.
+
+### Evidências
+
+Todas as evidências de vídeo e prints de execução estão disponíveis no link abaixo:
+
+<div style="text-align: center;">
+    <font size="3"><p>Planilha de Evidências — M1.2.2</p></font>
+    <a href="https://unbbr-my.sharepoint.com/:x:/g/personal/222006605_aluno_unb_br/IQAeyXZ17yVpQpV9nSw38vuOAYoonlIwHQ9OnTSMqCuFL6M?e=0i6qSe" target="_blank"><b>Acesse aqui os vídeos e registros da execução</b></a>
+</div>
+
+---
+
+---
+
 ## x. Compatibilidade
 
 ### M2.1.2 - Taxa de Conflito com Extensões de Navegador
@@ -21,9 +173,8 @@ Foram utilizadas duas extensões dentro do ambiente do Google Chrome (Versão ma
 | Grammarly | 14.1264.0 | Injeção de script em campos de texto (Interações 1-10).            |
 | Waalaxy   | 1.3.227   | Injeção de widgets e botões na interface (DOM) (Interações 11-20). |
 
-#### Resultados Brutos por Iteração
 
-A tabela a seguir registra o número de conflitos observados a cada uma das 20 interações críticas:
+#### Resultados Brutos por Iteração
 
 | Interação | Resultado (nº de conflitos) | Extensão Testada |
 | :-------- | :-------------------------- | :--------------- |
@@ -61,26 +212,4 @@ A tabela a seguir registra o número de conflitos observados a cada uma das 20 i
 
 <div style="text-align: center;">
     <font size="3"><p>Figura 1: Erro de Falha de Extração</p></font>
-    <img src="../coleta/evidencias/M.2.1.2erro1.png" alt="Falha de Extração">
-    <font size="3"><p>Figura 2: Erro de Falha de Carregamento</p></font>
-    <img src="../coleta/evidencias/M.2.1.2erro2.png" alt="Falha de Carregamento">
-    <font size="3"><p>Figura 3: Erro de Falha Funcional</p></font>
-    <img src="../coleta/evidencias/M.2.1.2erro3.png" alt="Falha Funcional">
-    <font size="3"><p>Vídeo</p></font>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Jh_vf3EznfI?si=iMG6O19ahkt1iKCf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-### Análise Final
-
-O número total de ocorrências de falha registradas foi de 15. Aplicando a Tabela de Julgamento da Métrica realizada na Fase 2:
-
-| Contagem Registrada | Nível de Julgamento (Fase 2) | Conclusão              |
-| :------------------ | :--------------------------- | :--------------------- |
-| 15 Conflitos        | 11–20 conflitos              | Insuficiente (Laranja) |
-
-* A coexistência do LinkedIn com extensões é classificada como Insuficiente (Laranja). Embora o site seja possível de ser usado (o navegador não travou completamente), a frequência de 15 ocorrências de falha em 20 interações é muito alta, confirmando a instabilidade crítica do ambiente diante dessas extensões.
-* A Aplicação interfere negativamente, pois as falhas de script das extensões (Grammarly) e os erros de carregamento (Waalaxy) consumiram recursos e resultaram em falha funcional visível ao usuário final.
-* A **Hipótese 3.2 (H3.2)** previa que a métrica M2.1.2 apresentaria um Nível Insuficiente (> 11%) de conflitos com extensões ativas que interagem com o DOM.
-    * **Resultado:** O teste confirmou a H3.2. As extensões ativas (Grammarly e Waalaxy), que injetam scripts e widgets no DOM do LinkedIn, geraram 15 ocorrências de falha, classificando o resultado no Nível Insuficiente (Laranja).
-    * **Implicação:** O resultado valida a premissa de que a arquitetura do LinkedIn apresenta fragilidade de coexistência com scripts injetados, causando erros de parsing e falhas de requisição de recursos.
-* Apesar de o site ainda ser utilizável, a interferência é frequente e negativa. Em **75%** das interações de teste, nos deparamos com falhas visíveis ou erros no console, exigindo que ele ignore ou reinicie a tarefa. Isso se deve aos 3 Defeitos (Causas Raízes) Únicos que se manifestaram 15 vezes. 
+    <img src="../coleta/evidencias/M.2.1.2erro1.png" alt="Falha de Extr
