@@ -74,14 +74,14 @@ A equipe é alocada por métrica para garantir foco e especialização na coleta
 
 | Membro                   | Responsabilidades                                                             | Total de Execuções | Detalhamento das Execuções                                                                        |
 | :----------------------- | :---------------------------------------------------------------------------- | :----------------- | :------------------------------------------------------------------------------------------------ |
-| **Bruno Cruz**           | **M2.1.2** (Conflito com Extensões)                                           | 10                 | 10 interações críticas com extensões                                                              |
+| **Bruno Cruz**           | **M2.1.2** (Conflito com Extensões)                                           | 20                 | 20 interações críticas com extensões                                                              |
 | **Gabriel Mendes**       | **M1.2.1** (Completude de Campos) e **M1.2.2** (Cobertura de Funcionalidades) | 8                  | 4 checklists para Completude de Campos e 4 checklists para Cobertura de Funcionalidades           |
 | **João Moreira**         | **M2.1.1** (Pico de Consumo de Recursos)                                      | 2                  | 2 execuções de monitoramento (15 min)                                                             |
 | **Maria Eduarda**        | **M1.1.2** (Taxa de Erro de Candidatura)                                      | 20                 | 20 tentativas de candidatura                                                                      |
 | **Mayara Marques**       | **M2.1.3** (Tempo Médio de Recuperação)                                       | 5                  | 5 repetições de travamento simulado (média).                                                      |
 | **Pedro Túlio**          | **M1.1.1** (Conformidade de Busca) e **M1.1.3** (Tempo Médio de Resposta)     | 20                 | 10 execuções de busca (inspeção de resultados) e 10 execuções de busca (cronometragem)            |
 | **Toda a Equipe**        | **M1.2.3** (Disponibilidade de Recursos Complementares)                       | -                  | -                                                                                                 |
-| **Avaliadores (Equipe)** | Execução dos roteiros de testes, coleta e registro de dados.                  | 65                 | O total de 65 execuções é a soma de todas as repetições mínimas obrigatórias para coleta de dados |
+| **Avaliadores (Equipe)** | Execução dos roteiros de testes, coleta e registro de dados.                  | 75                 | O total de 75 execuções é a soma de todas as repetições para coleta de dados |
 
 A métrica **M1.2.3 (Disponibilidade de Recursos Complementares)** é intrinsecamente compartilhada por toda a equipe porque ela exige um monitoramento passivo e contínuo ao longo do período de testes. Diferente das outras métricas, que são pontuais (testes unitários ou cronometragem específica)
 

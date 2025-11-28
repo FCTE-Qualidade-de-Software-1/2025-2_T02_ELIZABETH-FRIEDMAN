@@ -239,13 +239,13 @@ A Compatibilidade refere-se à capacidade do produto de coexistir e trocar infor
 
 <font size="3"><p style="text-align: center">Tabela 14: Níveis e critérios da Métrica 2.1.2</p></font>
 
-| Nível | Pontuação      | Critério de Julgamento                                                     |
-| :---- | :------------- | :------------------------------------------------------------------------- |
-| 5     | 0% de conflito | **Excelente (Verde):** Nenhum problema de compatibilidade.                 |
-| 4     | 1–5%           | **Bom (Verde):** Conflitos raros e isolados.                               |
-| 3     | 6–10%          | **Aceitável (Amarelo):** Conflitos ocasionais sem perda de funcionalidade. |
-| 2     | 11–20%         | **Insuficiente (Laranja):** Conflitos frequentes.                          |
-| 1     | > 20%          | **Crítico (Vermelho):** Conflitos graves impedem o uso normal.             |
+| Nível | Pontuação       | Critério de Julgamento                                                     |
+| :---- | :-------------- | :------------------------------------------------------------------------- |
+| 5     | nenhum conflito | **Excelente (Verde):** Nenhum problema de compatibilidade.                 |
+| 4     | 1–5 conflitos   | **Bom (Verde):** Conflitos raros e isolados.                               |
+| 3     | 6–10 conflitos  | **Aceitável (Amarelo):** Conflitos ocasionais sem perda de funcionalidade. |
+| 2     | 11–20 conflitos | **Insuficiente (Laranja):** Conflitos frequentes.                          |
+| 1     | > 20 conflitos  | **Crítico (Vermelho):** Conflitos graves impedem o uso normal.             |
 
 #### M2.1.3 - Tempo Médio de Recuperação após Travamento
 
