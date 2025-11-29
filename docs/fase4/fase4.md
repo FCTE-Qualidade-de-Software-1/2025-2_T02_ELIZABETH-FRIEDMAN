@@ -1,20 +1,20 @@
 # Fase 4 - Executar a avaliação
 
-## 4.x Adequação Funcional
+## 4.1 Adequação Funcional
 
 ### 1. Métrica M1.1.1 (Taxa de Conformidade de Busca) e M1.1.3 (Tempo de Resposta)
 
 #### 1.1 Metodologia da Coleta
 
-Conforme planejado na Fase 3, foram realizadas **10 execuções de busca** utilizando simultaneamente pelo menos três filtros (ex: Cargo + Localidade + Tipo de Vaga/Experiência).  
+Conforme planejado na Fase 3, foram realizadas **10 execuções de busca** utilizando simultaneamente pelo menos três filtros (ex: Cargo + Localidade + Tipo de Vaga/Experiência).
 O objetivo foi estressar a ferramenta para validar a precisão dos resultados e a performance da API.
 
-### Ferramentas utilizadas:
+**Ferramentas utilizadas:**
 
 - **M1.1.1:** Inspeção visual dos resultados retornados (amostra de até 10 itens).
 - **M1.1.3:** Chrome DevTools (Network Tab), filtrando pela requisição `voyagerJobsDashJobCards`.
 
-### Tabela de Registros (Dados Brutos)
+#### Tabela de Registros (Dados Brutos)
 
 | Execução (#) | M1.1.3: Tempo (s) | M1.1.3: Tempo (ms) | M1.1.1: Aderência | % Conformidade | Observações |
 |--------------|-------------------|---------------------|-------------------|----------------|-------------|
@@ -29,47 +29,45 @@ O objetivo foi estressar a ferramenta para validar a precisão dos resultados e 
 | 09 | 0,61 s | 610 ms | 8/8 | 100% | Retornou apenas 8 resultados totais, todos corretos. |
 | 10 | 0,59 s | 590 ms | 2/2 | 100% | Filtro restritivo: apenas 2 resultados, ambos corretos. |
 
-### **RESULTADO**
+**RESULTADO**
 
-- **Média (s):** 0,678 s  
-- **Média (ms):** 678 ms  
+- **Média (s):** 0,678 s
+- **Média (ms):** 678 ms
 - **Total de Aderência:** 88/88 — **100%**
 
 ---
 
-### 1.2 Análise e Julgamento dos Resultados
+#### 1.2 Análise e Julgamento dos Resultados
 
-#### A) Análise da M1.1.1 — Taxa de Conformidade de Busca
+**A) Análise da M1.1.1 — Taxa de Conformidade de Busca**
 
 **Resultado Obtido:** 100% de conformidade.
 
-**Critério de Julgamento (Tabela 5 da Fase 2):**  
+**Critério de Julgamento (Tabela 5 da Fase 2):**
 O resultado se enquadra no **Nível 5 - Excelente (Verde)**, que exige 100% de acerto ("Nenhum resultado incorreto encontrado").
 
-#### Validação da Hipótese H1.1
+**Validação da Hipótese H1.1**
 
 - **Hipótese:** A H1.1 previa que, ao aplicar três filtros, a taxa cairia para um Nível Insuficiente (< 84%), esperando resultados irrelevantes.
-- **Conclusão:** A hipótese foi **REFUTADA POSITIVAMENTE**.  
+- **Conclusão:** A hipótese foi **REFUTADA POSITIVAMENTE**.
   O sistema demonstrou alta precisão e, em filtros restritivos, preferiu retornar menos resultados do que apresentar itens incorretos.
 
----
-
-#### B) Análise da M1.1.3 — Tempo Médio de Resposta
+**B) Análise da M1.1.3 — Tempo Médio de Resposta**
 
 **Resultado Obtido:** 678 ms (0,67 s).
 
-**Critério de Julgamento (Tabela 7 da Fase 2):**  
+**Critério de Julgamento (Tabela 7 da Fase 2):**
 Classificação: **Nível 5 — Excelente (Verde)** (≤ 1 s).
 
-#### Validação da Hipótese H1.2
+**Validação da Hipótese H1.2**
 
 - **Hipótese:** Esperava-se Nível Aceitável (2–4 s).
-- **Conclusão:** A hipótese foi **REFUTADA POSITIVAMENTE**.  
+- **Conclusão:** A hipótese foi **REFUTADA POSITIVAMENTE**.
   O tempo médio ficou abaixo de 700 ms e execuções com menos resultados foram mais rápidas, indicando otimização do payload.
 
 ---
 
-### 1.3 Veredito Final (Correção Funcional — Busca)
+#### 1.3 Veredito Final (Correção Funcional — Busca)
 
 Com base nas métricas **M1.1.1** e **M1.1.3**, a funcionalidade de **Busca do LinkedIn Web foi classificada como _EXCELENTE_.**
 
@@ -81,68 +79,137 @@ O sistema demonstrou ser capaz de lidar com consultas complexas mantendo:
 
 Mesmo com filtros restritivos, a ferramenta priorizou a qualidade dos dados e confirmou a robustez da API.
 
-### Evidências
+**Evidências**
 [Vídeo dos testes](https://www.youtube.com/watch?v=qaoLFz5y2eY)
 
-## M1.2.1 — Completude de Campos Críticos (Experiência)
+---
 
-* **Tipo de Medição:** Indireta (Checklist estruturado).  
-* **Responsável pela Coleta:** Gabriel Mendes.  
+### 2. Métrica M1.1.2 — Taxa de Erro de Candidatura
+
+* **Tipo de Medição:** Indireta (Contagem de Falhas).
+* **Responsável pela Coleta:** Maria Eduarda.
+* **Objetivo GQM:** Verificar a estabilidade técnica e funcional do processo de "Candidatura Simplificada" (Easy Apply) ao submeter dados.
+
+#### 2.1 Metodologia da Coleta
+
+Foram realizadas **20 tentativas de candidatura** em vagas distintas que ofereciam a modalidade "Candidatura Simplificada".
+O teste consistiu em completar todo o fluxo do modal, preenchendo os campos obrigatórios e clicando no botão final de envio, monitorando ocorrências de erros técnicos (travamento, erro de servidor ou falha de script).
+
+#### Tabela de Registros (Dados Brutos)
+
+| ID | Status (PASS/FAIL) | Descrição do Erro / Observações |
+|----|-------------------|---------------------------------|
+| 01 | **PASS** | Sucesso / Fluxo concluído |
+| 02 | **PASS** | Sucesso / Fluxo concluído |
+| 03 | **PASS** | Sucesso / Fluxo concluído |
+| 04 | **PASS** | Sucesso / Fluxo concluído |
+| 05 | **PASS** | Sucesso / Fluxo concluído |
+| 06 | **PASS** | Sucesso / Fluxo concluído |
+| 07 | **PASS** | Sucesso / Fluxo concluído |
+| 08 | **PASS** | Sucesso / Fluxo concluído |
+| 09 | **PASS** | Sucesso / Fluxo concluído |
+| 10 | **PASS** | Sucesso / Fluxo concluído |
+| 11 | **PASS** | Sucesso / Fluxo concluído |
+| 12 | **PASS** | Sucesso / Fluxo concluído |
+| 13 | **PASS** | Sucesso / Fluxo concluído |
+| 14 | **PASS** | Sucesso / Fluxo concluído |
+| 15 | **PASS** | Sucesso / Fluxo concluído |
+| 16 | **PASS** | Sucesso / Fluxo concluído |
+| 17 | **PASS** | Sucesso / Fluxo concluído |
+| 18 | **PASS** | Sucesso / Fluxo concluído |
+| 19 | **PASS** | Sucesso / Fluxo concluído |
+| 20 | **PASS** | Sucesso / Fluxo concluído |
+
+**RESULTADO**
+
+- **Total de Tentativas:** 20
+- **Total de Sucessos:** 20
+- **Total de Falhas:** 0
+- **Taxa de Erro:** **0%**
+
+---
+
+#### 2.2 Análise e Julgamento dos Resultados
+
+**Resultado Obtido:** 0% de Erro.
+
+**Critério de Julgamento (Baseado na Correção Funcional):**
+O resultado atinge o **Nível 5 - Excelente (Verde)**, indicando que não houve nenhuma falha impeditiva durante a execução da tarefa crítica.
+
+**Validação da Hipótese H1.1.2**
+
+- **Hipótese:** A taxa de erro de candidatura seria nula ou desprezível, garantindo a submissão dos dados.
+- **Conclusão:** A hipótese foi **CONFIRMADA**.
+  O mecanismo de Easy Apply mostrou-se extremamente robusto, processando requisições em diferentes vagas sem instabilidade.
+
+#### Evidências
+
+O registro completo das 20 execuções pode ser visualizado no vídeo abaixo:
+
+<div style="text-align: center;">
+    <font size="3"><p>Evidência de Execução — M1.1.2</p></font>
+    <a href="https://youtu.be/1yfcdq8OwfE" target="_blank"><b>Acesse aqui o vídeo da execução dos testes</b></a>
+</div>
+
+---
+
+### 3. Métrica M1.2.1 — Completude de Campos Críticos (Experiência)
+
+* **Tipo de Medição:** Indireta (Checklist estruturado).
+* **Responsável pela Coleta:** Gabriel Mendes.
 * **Objetivo GQM:** Verificar se todos os campos essenciais da seção *Experiência* no LinkedIn Web estão presentes e funcionais.
 
-#### Metodologia da Coleta
+#### 3.1 Metodologia da Coleta
 
 A coleta foi realizada conforme definido na Fase 3, utilizando **4 cenários específicos**:
 
-- Chrome-01 (sessão normal)  
-- Chrome-02 (modo anônimo)  
-- Safari-01 (sessão normal)  
+- Chrome-01 (sessão normal)
+- Chrome-02 (modo anônimo)
+- Safari-01 (sessão normal)
 - Safari-02 (modo privado com restrições de cookies)
 
 Para cada cenário, foi executado um checklist vertical contendo **8 campos críticos** definidos na Fase 2: Cargo, Tipo de vínculo, Nome da empresa, Localidade, Modalidade, Data de início, Data de término e Descrição.
 
 Cada campo foi avaliado como:
 
-- **S** — Presente e funcional  
+- **S** — Presente e funcional
 - **N** — Ausente ou com comportamento inadequado
-
----
 
 #### Resultados Brutos (Checklist)
 
-| Campo                  | Chrome-01 | Chrome-02 | Safari-01 | Safari-02 |
+| Campo | Chrome-01 | Chrome-02 | Safari-01 | Safari-02 |
 |----------------------- |-----------|-----------|-----------|-----------|
-| Cargo                  | S         | S         | S         | S         |
-| Tipo de vínculo        | S         | S         | S         | S         |
-| Nome da empresa        | S         | S         | S         | S         |
-| Localidade             | S         | S         | S         | S         |
-| Modalidade             | S         | S         | S         | S         |
-| Data de início         | S         | S         | S         | S         |
-| Data de término        | S         | S         | S         | S         |
-| Descrição              | S         | S         | S         | S         |
-| **Total de Campos**    | **8**     | **8**     | **8**     | **8**     |
-| **% Completude**       | **100%**  | **100%**  | **100%**  | **100%**  |
-| **Nível**              | **5**     | **5**     | **5**     | **5**     |
+| Cargo | S | S | S | S |
+| Tipo de vínculo | S | S | S | S |
+| Nome da empresa | S | S | S | S |
+| Localidade | S | S | S | S |
+| Modalidade | S | S | S | S |
+| Data de início | S | S | S | S |
+| Data de término | S | S | S | S |
+| Descrição | S | S | S | S |
+| **Total de Campos** | **8** | **8** | **8** | **8** |
+| **% Completude** | **100%** | **100%** | **100%** | **100%** |
+| **Nível** | **5** | **5** | **5** | **5** |
 
 ---
 
-### Análise Final da Métrica M1.2.1
+#### 3.2 Análise Final da Métrica M1.2.1
 
-A métrica obteve **100% de completude** em todos os cenários, mantendo todos os campos essenciais disponíveis e funcionais.  
+A métrica obteve **100% de completude** em todos os cenários, mantendo todos os campos essenciais disponíveis e funcionais.
 Isso resulta em:
 
 > **Nível 5 — Excelente (Verde)**
 
-#### Relação com a Hipótese H2.1 (Fase 2)
+**Relação com a Hipótese H2.1 (Fase 2)**
 
 > *“A completude de campos críticos será de 100%.”*
 
-**Resultado:**  
+**Resultado:**
 ✔ *Hipótese Confirmada*
 
 O LinkedIn demonstra consistência total no módulo de Experiência, sem falhas, omissões ou comportamentos inesperados.
 
-### Evidências
+**Evidências**
 
 Todas as evidências de vídeo e prints de execução estão disponíveis no link abaixo:
 
@@ -153,58 +220,54 @@ Todas as evidências de vídeo e prints de execução estão disponíveis no lin
 
 ---
 
----
+### 4. Métrica M1.2.2 — Cobertura de Funcionalidades Relevantes
 
-### M1.2.2 — Cobertura de Funcionalidades Relevantes
-
-* **Tipo de Medição:** Indireta (Checklist funcional).  
-* **Responsável pela Coleta:** Gabriel Mendes.  
+* **Tipo de Medição:** Indireta (Checklist funcional).
+* **Responsável pela Coleta:** Gabriel Mendes.
 * **Objetivo GQM:** Avaliar se as funcionalidades essenciais da jornada do candidato estão presentes e plenamente funcionais no LinkedIn Web.
 
-#### Metodologia da Coleta
+#### 4.1 Metodologia da Coleta
 
 A coleta utilizou 4 cenários distintos:
 
-- Chrome-01 (normal)  
-- Chrome-Ext-02 (extensões ativas)  
-- Safari-01 (normal)  
+- Chrome-01 (normal)
+- Chrome-Ext-02 (extensões ativas)
+- Safari-01 (normal)
 - Safari-Priv-02 (privado)
 
 Foram avaliadas 7 funcionalidades críticas:
 
-1. Buscar vaga  
-2. Aplicar candidatura  
-3. Salvar vaga  
-4. Criar alerta  
-5. Usar filtros  
-6. Ver detalhes da vaga  
-7. Ver vagas salvas  
+1. Buscar vaga
+2. Aplicar candidatura
+3. Salvar vaga
+4. Criar alerta
+5. Usar filtros
+6. Ver detalhes da vaga
+7. Ver vagas salvas
 
 Cada funcionalidade foi marcada como:
 
-- **S** — Funcional e disponível  
+- **S** — Funcional e disponível
 - **N** — Ausente ou com erro
-
----
 
 #### Resultados Brutos (Checklist)
 
-| Funcionalidade         | Chrome-01 | Chrome-Ext-02 | Safari-01 | Safari-Priv-02 |
+| Funcionalidade | Chrome-01 | Chrome-Ext-02 | Safari-01 | Safari-Priv-02 |
 |------------------------|-----------|----------------|-----------|-----------------|
-| Buscar vaga            | S         | S              | S         | S               |
-| Aplicar candidatura    | S         | S              | S         | S               |
-| Salvar vaga            | S         | S              | S         | S               |
-| Criar alerta           | S         | S              | S         | S               |
-| Usar filtros           | S         | S              | S         | S               |
-| Ver detalhes da vaga   | S         | S              | S         | S               |
-| Ver vagas salvas       | S         | S              | S         | S               |
-| **Total Funcionalidades** | **7** | **7**          | **7**     | **7**           |
-| **% Cobertura**        | **100%**  | **100%**       | **100%**  | **100%**        |
-| **Nível**              | **5**     | **5**          | **5**     | **5**           |
+| Buscar vaga | S | S | S | S |
+| Aplicar candidatura | S | S | S | S |
+| Salvar vaga | S | S | S | S |
+| Criar alerta | S | S | S | S |
+| Usar filtros | S | S | S | S |
+| Ver detalhes da vaga | S | S | S | S |
+| Ver vagas salvas | S | S | S | S |
+| **Total Funcionalidades** | **7** | **7** | **7** | **7** |
+| **% Cobertura** | **100%** | **100%** | **100%** | **100%** |
+| **Nível** | **5** | **5** | **5** | **5** |
 
 ---
 
-### Análise Final da Métrica M1.2.2
+#### 4.2 Análise Final da Métrica M1.2.2
 
 Todas as funcionalidades críticas da jornada do candidato foram encontradas e funcionando corretamente em **100% dos cenários avaliados**.
 
@@ -212,16 +275,16 @@ Resultado:
 
 > **Nível 5 — Excelente (Verde)**
 
-#### Relação com a Hipótese H2.2 (Fase 2)
+**Relação com a Hipótese H2.2 (Fase 2)**
 
 > *“A Cobertura de Funcionalidades será ≥ 95% (Nível Excelente).”*
 
-**Resultado:**  
+**Resultado:**
 ✔ *Hipótese Confirmada*
 
 O LinkedIn apresentou robustez funcional em todos os testes, mantendo toda a jornada do candidato acessível e estável.
 
-### Evidências
+**Evidências**
 
 Todas as evidências de vídeo e prints de execução estão disponíveis no link abaixo:
 
@@ -232,17 +295,15 @@ Todas as evidências de vídeo e prints de execução estão disponíveis no lin
 
 ---
 
----
+## 4.2 Compatibilidade
 
-## x. Compatibilidade
-
-### M2.1.2 - Taxa de Conflito com Extensões de Navegador
+### 1. Métrica M2.1.2 - Taxa de Conflito com Extensões de Navegador
 
 * **Tipo de Medição:** Indireta (Calculada a partir de contagens).
 * **Responsável pela Coleta:** Bruno Cruz.
 * **Objetivo GQM:** Avaliar se o LinkedIn Web consegue coexistir sem impacto negativo com outras aplicações e extensões no ambiente do usuário.
 
-#### Metodologia da Coleta
+#### 1.1 Metodologia da Coleta
 
 A coleta para esta métrica consistiu em 20 interações críticas, projetadas para forçar a injeção de scripts na interface do LinkedIn e medir a frequência de erros de script ou falhas de renderização.
 
@@ -250,47 +311,47 @@ A coleta para esta métrica consistiu em 20 interações críticas, projetadas p
 
 Foram utilizadas duas extensões dentro do ambiente do Google Chrome (Versão mais recente), que injetam código intensamente, criando o cenário de maior risco de conflito:
 
-| Extensão  | Versão    | Foco do teste                                                      |
+| Extensão | Versão | Foco do teste |
 | :-------- | :-------- | :----------------------------------------------------------------- |
-| Grammarly | 14.1264.0 | Injeção de script em campos de texto (Interações 1-10).            |
-| Waalaxy   | 1.3.227   | Injeção de widgets e botões na interface (DOM) (Interações 11-20). |
+| Grammarly | 14.1264.0 | Injeção de script em campos de texto (Interações 1-10). |
+| Waalaxy | 1.3.227 | Injeção de widgets e botões na interface (DOM) (Interações 11-20). |
 
 
 #### Resultados Brutos por Iteração
 
 | Interação | Resultado (nº de conflitos) | Extensão Testada |
 | :-------- | :-------------------------- | :--------------- |
-| 1         | 1                           | Grammarly        |
-| 2         | 1                           | Grammarly        |
-| 3         | 0                           | Grammarly        |
-| 4         | 0                           | Grammarly        |
-| 5         | 0                           | Grammarly        |
-| 6         | 0                           | Grammarly        |
-| 7         | 0                           | Grammarly        |
-| 8         | 0                           | Grammarly        |
-| 9         | 0                           | Grammarly        |
-| 10        | 0                           | Grammarly        |
-| 11        | 1                           | Waalaxy          |
-| 12        | 1                           | Waalaxy          |
-| 13        | 1                           | Waalaxy          |
-| 14        | 2                           | Waalaxy          |
-| 15        | 2                           | Waalaxy          |
-| 16        | 2                           | Waalaxy          |
-| 17        | 1                           | Waalaxy          |
-| 18        | 1                           | Waalaxy          |
-| 19        | 1                           | Waalaxy          |
-| 20        | 1                           | Waalaxy          |
+| 1 | 1 | Grammarly |
+| 2 | 1 | Grammarly |
+| 3 | 0 | Grammarly |
+| 4 | 0 | Grammarly |
+| 5 | 0 | Grammarly |
+| 6 | 0 | Grammarly |
+| 7 | 0 | Grammarly |
+| 8 | 0 | Grammarly |
+| 9 | 0 | Grammarly |
+| 10 | 0 | Grammarly |
+| 11 | 1 | Waalaxy |
+| 12 | 1 | Waalaxy |
+| 13 | 1 | Waalaxy |
+| 14 | 2 | Waalaxy |
+| 15 | 2 | Waalaxy |
+| 16 | 2 | Waalaxy |
+| 17 | 1 | Waalaxy |
+| 18 | 1 | Waalaxy |
+| 19 | 1 | Waalaxy |
+| 20 | 1 | Waalaxy |
 
-##### Mapeamento de Falha vs. Conflito
+#### Mapeamento de Falha vs. Conflito
 
-| Causa Raiz                        | Mapeamento no Console                           | Atribuição | Contagem Total                                              |
+| Causa Raiz | Mapeamento no Console | Atribuição | Contagem Total |
 | :-------------------------------- | :---------------------------------------------- | :--------- | :---------------------------------------------------------- |
-| Falha de Extração                 | ERROR INJECTIONS - extractMemberIdFromProfile   | Grammarly  | 2 ocorrências (interações 1 e 2)                            |
-| Falha de Carregamento             | GET chrome-extension://invalid/ net::ERR_FAILED | Waalaxy    | 10 ocorrências (em todos os testes)                         |
-| Falha Funcional                   | Ocorreu um erro durante a ligação ao servidor   | Waalaxy    | 3 ocorrências (Associadas ao erro de GET, interações 14-16) |
-| Total de Ocorrências Registradas: |                                                 |            | 15                                                          |
+| Falha de Extração | ERROR INJECTIONS - extractMemberIdFromProfile | Grammarly | 2 ocorrências (interações 1 e 2) |
+| Falha de Carregamento | GET chrome-extension://invalid/ net::ERR_FAILED | Waalaxy | 10 ocorrências (em todos os testes) |
+| Falha Funcional | Ocorreu um erro durante a ligação ao servidor | Waalaxy | 3 ocorrências (Associadas ao erro de GET, interações 14-16) |
+| Total de Ocorrências Registradas: | | | 15 |
 
-##### Evidências
+**Evidências**
 
 <div style="text-align: center;">
     <font size="3"><p>Figura 1: Erro de Falha de Extração</p></font>
