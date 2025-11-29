@@ -297,13 +297,49 @@ Todas as evidências de vídeo e prints de execução estão disponíveis no lin
 
 ## 4.2 Compatibilidade
 
-### 1. Métrica M2.1.2 - Taxa de Conflito com Extensões de Navegador
+### 1. Métrica M2.1.1 - Consumo de Recursos (CPU e RAM)
+
+* **Tipo de Medição:** Direta (Monitoramento via Sistema Operacional).
+* **Responsável pela Coleta:** João Victor Felix Moreira.
+* **Objetivo GQM:** Avaliar a eficiência do LinkedIn Web quanto ao uso de hardware em cenários de uso intenso com extensões ativas, garantindo que a aplicação não cause travamentos no sistema do usuário.
+
+#### 1.1 Metodologia da Coleta
+
+A coleta monitorou o processo agrupado do navegador durante uma sessão de navegação simulada (busca de vagas, abertura de múltiplas abas e rolagem de feed). O monitoramento focou nos picos de estresse gerados pela renderização de conteúdo dinâmico (Single Page Application).
+
+**Ambiente de Teste**
+
+* **Sistema Operacional:** Windows 10/11.
+* **Navegador:** Google Chrome (Versão 131.0.x).
+* **Extensões Ativas:** uBlock Origin, McAfee WebAdvisor
+* **Ferramenta de Aferição:** Gerenciador de Tarefas do Windows (Aba Processos).
+
+#### Resultados Brutos por Fase de Navegação
+
+A tabela abaixo detalha o comportamento dos recursos durante os momentos chave do teste gravado
+
+| Fase do Teste   | Ação Realizada                                               | Pico de CPU (%)      | Consumo de RAM (MB/GB)   | Status do Processo      |
+|-----------------|--------------------------------------------------------------|------------------------|---------------------------|--------------------------|
+| **Busca/Carga** | Pesquisa por "Engenharia de Software" + Abertura de múltiplas abas   | **450,4%**             | 4.210 MB         | Pico de Processamento    |
+
+**Evidências**
+
+<div style="text-align: center;">
+    <font size="3"><p>Figura 2: Consumo de RAM estabilizado em alta (2.8GB)</p></font>
+    <p>
+        <a href="https://youtu.be/nDVkoS0W60A" target="_blank">
+            Video do teste (YouTube)
+        </a>
+    </p>
+</div>
+
+### 2. Métrica M2.1.2 - Taxa de Conflito com Extensões de Navegador
 
 * **Tipo de Medição:** Indireta (Calculada a partir de contagens).
 * **Responsável pela Coleta:** Bruno Cruz.
 * **Objetivo GQM:** Avaliar se o LinkedIn Web consegue coexistir sem impacto negativo com outras aplicações e extensões no ambiente do usuário.
 
-#### 1.1 Metodologia da Coleta
+#### 2.1 Metodologia da Coleta
 
 A coleta para esta métrica consistiu em 20 interações críticas, projetadas para forçar a injeção de scripts na interface do LinkedIn e medir a frequência de erros de script ou falhas de renderização.
 
@@ -358,9 +394,9 @@ Foram utilizadas duas extensões dentro do ambiente do Google Chrome (Versão ma
     <img src="../coleta/evidencias/M.2.1.2erro1.png" alt="Falha de Extr
 
 
-### M2.1.3 — Tempo Médio de Recuperação
+### 3. Métrica M2.1.3 — Tempo Médio de Recuperação
 
-#### 1. Metodologia da Coleta
+#### 3.1 Metodologia da Coleta
 
 A métrica foi avaliada conforme definido na Fase 3, utilizando:
 
@@ -374,7 +410,7 @@ A métrica foi avaliada conforme definido na Fase 3, utilizando:
 
 ---
 
-#### 2. Dados Brutos Obtidos (HAR)
+#### 3.2 Dados Brutos Obtidos (HAR)
 
 | Execução | Arquivo HAR              | onLoad (ms) | DOMContentLoaded (ms) |
 |---------|---------------------------|-------------|------------------------|
@@ -386,7 +422,7 @@ A métrica foi avaliada conforme definido na Fase 3, utilizando:
 
 ---
 
-#### 3. Estatísticas Calculadas
+#### 3.3 Estatísticas Calculadas
 
 **Valores:** 1875.005 • 1217.189 • 1965.572 • 1860.796  
 
@@ -396,7 +432,7 @@ A métrica foi avaliada conforme definido na Fase 3, utilizando:
 
 ---
 
-#### 4. Análise dos Resultados
+#### 3.4 Análise dos Resultados
 
 - O tempo médio de recuperação ficou em **1,73 segundos**.
 - Os valores são consistentes e estáveis (variação entre ~1.2 s e ~1.9 s).
@@ -415,13 +451,13 @@ Hipótese típica: “Tempo de recuperação < 3 s”.
 
 ---
 
-#### 5. Veredito Final da Métrica M2.1.3
+#### 3.5 Veredito Final da Métrica M2.1.3
 
 O LinkedIn demonstrou **elevada resiliência**, carregando completamente após falha simulada em menos de dois segundos, mantendo estabilidade entre as repetições.
 
 ---
 
-##### 6. Evidências
+##### 3.6 Evidências
 
 - HARs exportados
 - Gravações de tela de todas as execuções  
