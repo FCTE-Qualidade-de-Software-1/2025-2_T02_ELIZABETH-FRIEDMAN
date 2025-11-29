@@ -295,3 +295,77 @@ Foram utilizadas duas extensões dentro do ambiente do Google Chrome (Versão ma
 <div style="text-align: center;">
     <font size="3"><p>Figura 1: Erro de Falha de Extração</p></font>
     <img src="../coleta/evidencias/M.2.1.2erro1.png" alt="Falha de Extr
+
+
+### M2.1.3 — Tempo Médio de Recuperação
+
+#### 1. Metodologia da Coleta
+
+A métrica foi avaliada conforme definido na Fase 3, utilizando:
+
+- Chrome DevTools (aba Network)
+- Simulação de falha (modo Offline → Online)
+- Reload manual (F5)
+- Exportação do HAR imediatamente após a recuperação
+
+**Evento de início:** momento do reload  
+**Evento de fim:** `onLoad` registrado no HAR
+
+---
+
+#### 2. Dados Brutos Obtidos (HAR)
+
+| Execução | Arquivo HAR              | onLoad (ms) | DOMContentLoaded (ms) |
+|---------|---------------------------|-------------|------------------------|
+| 01      | www.linkedin.com.har      | 1875.005    | 1824.035               |
+| 02      | www.linkedin.com_2.har    | 1217.189    | 410.303                |
+| 03      | www.linkedin.com_3.har    | 1965.572    | 1908.511               |
+| 04      | www.linkedin.com_4.har    | 1860.796    | 1793.361               |
+| 05      | www.linkedin.com_5.har    | 1851.099    | 1791.203               |
+
+---
+
+#### 3. Estatísticas Calculadas
+
+**Valores:** 1875.005 • 1217.189 • 1965.572 • 1860.796  
+
+- **Média:** **1730.64 ms**  
+- **Mediana:** **1867.90 ms**  
+- **Desvio padrão:** ~**285.3 ms**
+
+---
+
+#### 4. Análise dos Resultados
+
+- O tempo médio de recuperação ficou em **1,73 segundos**.
+- Os valores são consistentes e estáveis (variação entre ~1.2 s e ~1.9 s).
+- A execução 02 foi a mais rápida; as demais ficaram próximas de ~1.85 s.  
+- O sistema recupera rapidamente a funcionalidade após falhas induzidas.
+
+##### **Classificação (critério da Fase 2)**  
+Como o valor médio ficou **abaixo de 2 segundos**, aplica-se:
+
+> **Nível 5 — Excelente (Verde)**
+
+##### **Validação da Hipótese associada**  
+Hipótese típica: “Tempo de recuperação < 3 s”.
+
+✔ **Hipótese Confirmada**
+
+---
+
+#### 5. Veredito Final da Métrica M2.1.3
+
+O LinkedIn demonstrou **elevada resiliência**, carregando completamente após falha simulada em menos de dois segundos, mantendo estabilidade entre as repetições.
+
+---
+
+##### 6. Evidências
+
+- HARs exportados
+- Gravações de tela de todas as execuções  
+
+Todos os arquivos estão presentes na pasta:  
+`docs/fase4/coleta/evidencias/m2.1.3/`
+
+---
